@@ -140,7 +140,7 @@ class BaseAgent(abc.ABC):  # pylint: disable=too-many-instance-attributes
     - :meth:`keyboard_control_callback`: Keyboard control callback designed for debug mode for keyboard controlling.
     - :meth:`debug`: Implement specific action debug mode which maps keyboard input into action of agent.
     - :meth:`is_alive`: Check if agent is alive.
-    - :meth:`reset`: Reset agent to specific initial internal state, eg.joints angles.
+    - :meth:`reset`: Reset agent to specific initial internal next_state, eg.joints angles.
 
     Attributes:
 

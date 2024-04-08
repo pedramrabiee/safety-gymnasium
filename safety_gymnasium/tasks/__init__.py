@@ -33,6 +33,8 @@ from safety_gymnasium.tasks.safe_navigation.goal.goal_level0 import GoalLevel0
 from safety_gymnasium.tasks.safe_navigation.goal.goal_level1 import GoalLevel1
 from safety_gymnasium.tasks.safe_navigation.goal.goal_level2 import GoalLevel2
 from safety_gymnasium.tasks.safe_navigation.goal.goal_level3 import GoalLevel3
+from safety_gymnasium.tasks.safe_navigation.goal.goal_level4 import GoalLevel4
+from safety_gymnasium.tasks.safe_navigation.goal.goal_level5 import GoalLevel5
 from safety_gymnasium.tasks.safe_navigation.push.push_level0 import PushLevel0
 from safety_gymnasium.tasks.safe_navigation.push.push_level1 import PushLevel1
 from safety_gymnasium.tasks.safe_navigation.push.push_level2 import PushLevel2

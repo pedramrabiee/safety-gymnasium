@@ -152,7 +152,7 @@ class ShadowHandCatchOver2Underarm_Safe_joint(BaseTask):
             cam_target = gymapi.Vec3(6.0, 5.0, 0.0)
             self.gym.viewer_camera_look_at(self.viewer, None, cam_pos, cam_target)
 
-        # get gym GPU state tensors
+        # get gym GPU next_state tensors
         actor_root_state_tensor = self.gym.acquire_actor_root_state_tensor(self.sim)
         dof_state_tensor = self.gym.acquire_dof_state_tensor(self.sim)
         rigid_body_tensor = self.gym.acquire_rigid_body_state_tensor(self.sim)
@@ -714,7 +714,7 @@ class ShadowHandCatchOver2Underarm_Safe_joint(BaseTask):
             self.compute_full_state(True)
 
     def compute_full_state(self, asymm_obs=False):
-        # fingertip observations, state(pose and vel) + force-torque sensors
+        # fingertip observations, next_state(pose and vel) + force-torque sensors
         num_ft_states = 13 * int(self.num_fingertips / 2)  # 65
         num_ft_force_torques = 6 * int(self.num_fingertips / 2)  # 30
 

@@ -153,7 +153,7 @@ class Builder(gymnasium.Env, gymnasium.utils.EzPickle):
         return task
 
     def set_seed(self, seed: int | None = None) -> None:
-        """Set internal random state seeds."""
+        """Set internal random next_state seeds."""
         self._seed = np.random.randint(2**32, dtype='int64') if seed is None else seed
         self.task.random_generator.set_random_seed(self._seed)
 
@@ -301,11 +301,11 @@ class Builder(gymnasium.Env, gymnasium.utils.EzPickle):
         - None (default): no render is computed.
         - human: render return None.
           The environment is continuously rendered in the current display or terminal. Usually for human consumption.
-        - rgb_array: return a single frame representing the current state of the environment.
+        - rgb_array: return a single frame representing the current next_state of the environment.
           A frame is a numpy.ndarray with shape (x, y, 3) representing RGB values for an x-by-y pixel image.
         - rgb_array_list: return a list of frames representing the states of the environment since the last reset.
           Each frame is a numpy.ndarray with shape (x, y, 3), as with `rgb_array`.
-        - depth_array: return a single frame representing the current state of the environment.
+        - depth_array: return a single frame representing the current next_state of the environment.
           A frame is a numpy.ndarray with shape (x, y) representing depth values for an x-by-y pixel image.
         - depth_array_list: return a list of frames representing the states of the environment since the last reset.
           Each frame is a numpy.ndarray with shape (x, y), as with `depth_array`.

@@ -35,7 +35,7 @@ class GoalLevel3(GoalLevel0):
         self._add_geoms(Hazards(num=3, size=0.2, keepout=0.18, name='0_hazards'))
         self._add_geoms(Hazards(num=2, size=0.3, keepout=0.6, name='1_hazards'))
         self._add_geoms(RectHazards(num=1, keepout=0.6, name='0_rect_hazards'))
-        self._add_geoms(RectHazards(num=2, size=[0.2, 0.6], keepout=0.6, name='1_rect_hazards'))
+        self._add_geoms(RectHazards(num=3, size=[0.2, 0.6], keepout=0.6, name='1_rect_hazards'))
 
         # self._add_geoms(Walls(num=1))
         # self._add_free_geoms(Vases(num=1, is_constrained=False))

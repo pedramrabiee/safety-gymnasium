@@ -33,7 +33,7 @@ __all__ = [
 ]
 
 VERSION = 'v0'
-ROBOT_NAMES = ('Point', 'Car', 'Doggo', 'Racecar', 'Ant')
+ROBOT_NAMES = ('Point', 'Pointunicycle', 'Car', 'Doggo', 'Racecar', 'Ant')
 MAKE_VISION_ENVIRONMENTS = True
 MAKE_DEBUG_ENVIRONMENTS = True
 
@@ -128,7 +128,7 @@ __combine(push_tasks, robots, max_episode_steps=1000)
 
 # Goal Environments
 # ----------------------------------------
-goal_tasks = {'Goal0': {}, 'Goal1': {}, 'Goal2': {}, 'Goal3': {}}
+goal_tasks = {'Goal0': {}, 'Goal1': {}, 'Goal2': {}, 'Goal3': {}, 'Goal4': {}, 'Goal5': {}}
 __combine(goal_tasks, robots, max_episode_steps=1000)
 
 

@@ -101,7 +101,7 @@ class SafetyAsyncVectorEnv(AsyncVectorEnv):
         """
         # check if the environment is running.
         self._assert_is_running()
-        # check if the state is waiting for step.
+        # check if the next_state is waiting for step.
         if self._state != AsyncState.WAITING_STEP:
             raise NoAsyncCallError(
                 'Calling `step_wait` without any prior call to `step_async`.',

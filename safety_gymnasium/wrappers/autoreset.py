@@ -31,8 +31,8 @@ class SafeAutoResetWrapper(AutoResetWrapper):
 
     Warning: When using this wrapper to collect roll-outs, note that when :meth:`Env.step` returns ``terminated`` or ``truncated``, a
         new observation from after calling :meth:`Env.reset` is returned by :meth:`Env.step` alongside the
-        final reward, terminated and truncated state from the previous episode.
-        If you need the final state from the previous episode, you need to retrieve it via the
+        final reward, terminated and truncated next_state from the previous episode.
+        If you need the final next_state from the previous episode, you need to retrieve it via the
         "final_observation" key in the info dict.
         Make sure you know what you're doing if you use this wrapper!
     """  # pylint: disable=line-too-long

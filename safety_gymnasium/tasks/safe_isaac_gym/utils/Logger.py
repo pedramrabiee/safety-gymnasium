@@ -110,7 +110,7 @@ class EpochLogger(Logger):
 
     def store(self, **kwargs):
         """
-        Save something into the epoch_logger's current state.
+        Save something into the epoch_logger's current next_state.
 
         Provide an arbitrary number of keyword arguments with numerical values.
         """

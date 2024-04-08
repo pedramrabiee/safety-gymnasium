@@ -32,6 +32,7 @@ from safety_gymnasium.utils.common_utils import ResamplingError, camel_to_snake
 from safety_gymnasium.utils.task_utils import theta2vec
 
 
+
 @dataclass
 class LidarConf:
     r"""Lidar observation parameters.
@@ -597,3 +598,6 @@ class BaseTask(Underlying):  # pylint: disable=too-many-instance-attributes,too-
     @abc.abstractmethod
     def goal_achieved(self) -> bool:
         """Check if task specific goal is achieved."""
+
+
+

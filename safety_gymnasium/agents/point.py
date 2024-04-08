@@ -22,7 +22,6 @@ import numpy as np
 from safety_gymnasium.bases.base_agent import BaseAgent
 from safety_gymnasium.utils.random_generator import RandomGenerator
 
-
 class Point(BaseAgent):
     """A simple agent constrained to the 2D-plane.
 
@@ -66,3 +65,4 @@ class Point(BaseAgent):
             elif key == glfw.KEY_L:
                 action[1] -= 1
         self.apply_action(action)
+

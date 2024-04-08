@@ -506,7 +506,7 @@ class World:  # pylint: disable=too-many-instance-attributes
         return get_body_xvelp(self.model, self.data, name).copy()
 
     def get_state(self):
-        """Returns a copy of the simulator state."""
+        """Returns a copy of the simulator next_state."""
         state = {
             'time': np.copy(self.data.time),
             'qpos': np.copy(self.data.qpos),
@@ -521,10 +521,10 @@ class World:  # pylint: disable=too-many-instance-attributes
 
     def set_state(self, value):
         """
-        Sets the state from an dict.
+        Sets the next_state from an dict.
 
         Args:
-        - value (dict): the desired state.
+        - value (dict): the desired next_state.
         - call_forward: optionally call sim.forward(). Called by default if
             the udd_callback is set.
         """

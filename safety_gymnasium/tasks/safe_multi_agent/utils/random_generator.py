@@ -203,7 +203,7 @@ class RandomGenerator:
         return self.random_generator.binomial(*args, **kwargs)
 
     def random_rot(self) -> float:
-        """Use internal random state to get a random rotation in radians."""
+        """Use internal random next_state to get a random rotation in radians."""
         return self.random_generator.uniform(0, 2 * np.pi)
 
     def choice(self, *args, **kwargs) -> np.ndarray:
